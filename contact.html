@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <meta name="description" content="Contact page of Electrifex Solutions" />
+    <meta name="keywords" content="electrifex, EV, audio system, CI/CD" />
+    <meta name="author" content="electrifex" />
+    <link rel="canonical" href="https://www.electrifex.com/" />
+    <meta property="og:title" content="Electrifex" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.electrifex.com/" />
+    <meta property="og:image" content="https://www.electrifex.com/EFX_Logo.svg" />
+    <meta property="og:description" content="Contact page of Electrifex Solutions" />
+    <meta property="og:site_name" content="Electrifex" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Contact Us</h1>
+      <div class="form-container">
+        <form>
+          <p>Fields marked * are required</p>
+          <div class="form-pair">
+            <div class="form-label-input">
+              <label for="fname">First Name *: </label>
+              <div class="input-error">
+                <input type="text" name="fname" id="fname" required />
+                <span class="err-msg">Please fill out this field</span>
+              </div>
+            </div>
+            <div class="form-label-input">
+              <label for="lname">Last Name *: </label>
+              <div class="input-error">
+                <input type="text" name="lname" id="lname" required />
+                <span class="err-msg">Please fill out this field</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-label-input">
+            <label for="email">Email *: </label>
+            <div class="input-error">
+              <input type="email" name="email" id="email" required />
+              <span class="err-msg">Please fill out this field</span>
+            </div>
+          </div>
+          <div class="form-label-input">
+            <label for="phno">Phone Number: </label>
+            <div class="input-error">
+              <input type="tel" name="phno" id="phno" />
+              <span class="err-msg">Please fill out this field</span>
+            </div>
+          </div>
+          <div class="form-label-input">
+            <label for="department">Department: </label>
+            <select name="department" id="department">
+              <option value="">Select a Department</option>
+              <option value="development">Development</option>
+              <option value="management">Management</option>
+            </select>
+          </div>
+          <div class="form-label-input">
+            <label for="message">Message: </label>
+            <div class="input-error">
+              <textarea name="message" id="message"></textarea>
+              <span class="err-msg">Please fill out this field</span>
+            </div>
+          </div>
+          <div class="form-label-input">
+            <input type="checkbox" name="news-letter" id="news-letter" />
+            <label for="news-letter">Subscribe to News Letter</label>
+          </div>
+          <div class="form-btns">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <h2>Our Head Office:</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.153235871456!2d76.3755284!3d10.0041985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080bfc19eaf8c9%3A0xfb3603d8a9bff5a7!2sElectrifex%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1781065024020!5m2!1sen!2sin"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Electrifex Head Office"
+        ></iframe>
+      </div>
+    </main>
+    <footer>
+      <small>&copy; All right are preserved. Electrifex</small>
+    </footer>
+  </body>
+</html>
