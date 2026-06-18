@@ -32,34 +32,32 @@
 }
 
 section {
-  margin-left: 10px;
-  margin-right: 8px;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  margin: 5px 8px 20px 10px;
 }
 
 .table-wrapper {
-  overflow-x: auto;
-  overflow-y: auto;
-  margin-left: 10px;
-  margin-right: 8px;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  overflow: auto;
+  margin: 5px 8px 20px 10px;
 }
+
 table {
   border-collapse: collapse;
 }
+
 thead {
   background-color: var(--clr-pri-ts1);
   color: white;
   position: sticky;
 }
+
 tbody tr:nth-child(odd) {
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(194 194 194);
 }
+
 tbody th {
   background-color: var(--clr-pri-ts2);
 }
+
 th,
 td {
   padding: 10px;
@@ -83,7 +81,7 @@ td:nth-child(2) {
   align-items: center;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (width <= 680px) {
   margin: 5px 8px 20px 10px;
 }
 
