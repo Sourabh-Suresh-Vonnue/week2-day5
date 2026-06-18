@@ -182,3 +182,14 @@ h1 {
 .dept:has(~ #management:target) {
   display: none;
 }
+
+/* contact */
+#news-letter {
+  display: none;
+}
+#news-letter + label::before {
+  content: '\2610 ';
+}
+#news-letter:checked + label::before {
+  content: '\2705 ';
+}
