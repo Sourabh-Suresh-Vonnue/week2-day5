@@ -6,9 +6,11 @@
   padding: 10px;
   margin-bottom: 10px;
 }
+
 .grid-wrapper > li {
   display: flex;
   flex-direction: column;
+
   /* justify-content: center;
   align-items: center; */
   text-align: center;
@@ -23,44 +25,43 @@
   padding: 10px;
   margin-bottom: 10px;
 }
+
 .flex-wrapper li {
   border: 1px solid var(--color-primary);
   padding: 5px;
 }
 
 section {
-  margin-left: 10px;
-  margin-right: 8px;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  margin: 5px 8px 20px 10px;
 }
 
 .table-wrapper {
-  overflow-x: auto;
-  overflow-y: auto;
-  margin-left: 10px;
-  margin-right: 8px;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  overflow: auto;
+  margin: 5px 8px 20px 10px;
 }
+
 table {
   border-collapse: collapse;
 }
+
 thead {
   background-color: var(--clr-pri-ts1);
   color: white;
   position: sticky;
 }
-tbody tr:nth-child(odd) {
-  background-color: rgb(194, 194, 194);
-}
-tbody th {
-  background-color: var(--clr-pri-ts2);
-}
+
 th,
 td {
   padding: 10px;
   text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(194 194 194);
+}
+
+tbody th {
+  background-color: var(--clr-pri-ts2);
 }
 
 /* recommended column */
@@ -84,27 +85,31 @@ td:nth-child(2) {
   display: flex;
   justify-content: center;
 }
+
 form {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: rgb(250, 239, 225);
+  background-color: rgb(250 239 225);
   padding: 20px;
   border: 1px solid black;
 }
+
 form fieldset {
   display: flex;
   flex-direction: column;
   background-color: bisque;
   gap: 10px;
 }
+
 .form-pair {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
 }
+
 .form-label-input {
   display: flex;
   height: 30px;
@@ -112,22 +117,27 @@ form fieldset {
   gap: 10px;
   flex: 1;
 }
+
 .form-label-input label {
   width: 180px;
 }
+
 .form-label-input input,
 .form-label-input select {
   height: 30px;
 }
+
 .form-label-input .input-error,
 .form-label-input select,
 .form-label-input textarea {
   flex: 1;
 }
+
 .form-label-input .input-error {
   display: flex;
   flex-direction: column;
 }
+
 .form-btns {
   display: flex;
   flex-direction: row;
@@ -136,26 +146,31 @@ form fieldset {
 }
 
 input:focus {
-  box-shadow: inset 2px 2px 5px rgb(0, 0, 0, 0.3);
+  box-shadow: inset 2px 2px 5px rgb(0 0 0 / 30%);
 }
 
 .err-msg {
   display: none;
 }
+
 input:user-invalid {
   border: 2px solid red;
 }
+
 input:user-invalid ~ .err-msg {
   display: block;
   color: red;
 }
+
 select:user-invalid {
   border: 2px solid red;
 }
+
 select:user-invalid ~ .err-msg {
   display: block;
   color: red;
 }
+
 .form-btns button:hover {
   box-shadow:
     0 1px 4px blue,
@@ -171,13 +186,14 @@ select:user-invalid ~ .err-msg {
   transform: translateZ(0);
   border: 1px solid black;
 }
+
 .map-container iframe {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (width <= 680px) {
   .grid-wrapper {
     grid-template-columns: 1fr;
   }
@@ -188,6 +204,7 @@ select:user-invalid ~ .err-msg {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .form-pair {
     margin-bottom: 20px;
   }
