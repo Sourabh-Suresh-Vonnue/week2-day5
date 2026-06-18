@@ -39,3 +39,20 @@ footer {
   margin-top: auto;
   padding: 10px;
 }
+
+main {
+  animation: page-entry-fade 1s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes page-entry-fade {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
