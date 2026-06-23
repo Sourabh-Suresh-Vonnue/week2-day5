@@ -27,14 +27,15 @@ nav ul {
   font-weight: 700;
   flex-wrap: wrap;
 }
+
 nav ul a {
   text-decoration: none;
-  color: rgb(17, 230, 106);
+  color: rgb(17 230 106);
 }
 
 footer {
   width: 100vw;
-  color: rgb(170, 117, 19);
+  color: rgb(170 117 19);
   background-color: antiquewhite;
   margin-top: auto;
   padding: 10px;
