@@ -10,28 +10,28 @@
 
 :root {
   --color-primary: blue;
-  --color-secondary: rgb(0, 162, 255);
-  --color-accent: rgb(55, 160, 63);
+  --color-secondary: rgb(0 162 255);
+  --color-accent: rgb(55 160 63);
   --color-success: green;
   --color-warning: orange;
   --color-error: red;
   --color-text: color-mix(in srgb, gold 50%, black 50%);
-  --color-bg: rgb(247, 238, 247);
+  --color-bg: rgb(247 238 247);
 
   /* tints and shades of primary color */
   --clr-pri-ts1: #4d4dff;
-  --clr-pri-ts2: rgb(154, 154, 255);
-  --clr-pri-ts3: hsl(240 100% 35.1);
-  --clr-pri-ts4: oklch(0.2307 0.1598 264.05);
+  --clr-pri-ts2: rgb(154 154 255);
+  --clr-pri-ts3: hsl(240deg 100% 35.1);
+  --clr-pri-ts4: oklch(23.07% 0.1598 264.05deg);
   --clr-pri-ts5: color-mix(in srgb, var(--color-primary), black 90%);
 }
 
 [data-theme='dark'] {
-  --color-primary: rgb(69, 69, 252);
-  --color-secondary: rgb(2, 126, 126);
-  --color-accent: rgb(52, 131, 59);
-  --color-text: rgb(189, 161, 5);
-  --color-bg: rgb(19, 14, 19);
+  --color-primary: rgb(69 69 252);
+  --color-secondary: rgb(2 126 126);
+  --color-accent: rgb(52 131 59);
+  --color-text: rgb(189 161 5);
+  --color-bg: rgb(19 14 19);
 }
 
 html {
@@ -42,24 +42,31 @@ html {
 h1 {
   font-size: 6rem;
 }
+
 h2 {
   font-size: 4.3rem;
 }
+
 h3 {
   font-size: 3rem;
 }
+
 h4 {
   font-size: 2.5rem;
 }
+
 h5 {
   font-size: 2rem;
 }
+
 h6 {
   font-size: 1.7rem;
 }
+
 body {
   font-size: 1.7rem;
 }
+
 small {
   font-size: 1.2rem;
 }
@@ -72,6 +79,7 @@ h5,
 h6 {
   font-family: 'Instrument Serif', serif;
 }
+
 body {
   font-family: 'Exo 2', sans-serif;
 }
@@ -79,18 +87,23 @@ body {
 h1 {
   color: var(--color-primary);
 }
+
 h2 {
   color: var(--color-secondary);
 }
+
 h3 {
   color: var(--clr-pri-ts1);
 }
+
 body {
   background-color: var(--color-bg);
 }
+
 p {
   color: var(--color-text);
 }
+
 a {
   color: var(--color-accent);
 }
