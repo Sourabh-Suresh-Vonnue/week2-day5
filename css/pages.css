@@ -1,0 +1,77 @@
+#hero {
+  width: 100vw;
+  height: 150px;
+  text-align: center;
+  background:
+    linear-gradient(to bottom, rgb(245 252 245 / 52%), rgb(124 126 28 / 73%)),
+    url('https://picsum.photos/id/17/200/300');
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid var(--color-primary);
+}
+
+#hero h1 {
+  margin-top: 30px;
+}
+
+#testimonials ul li {
+  max-width: 600px;
+}
+
+/* About */
+h1 {
+  text-align: center;
+}
+
+#history {
+  position: relative;
+}
+
+#history dl {
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+#history dl::before {
+  content: ' ';
+  width: 3px;
+  height: 78%;
+  border: 2px solid black;
+  position: absolute;
+  left: -1px;
+  z-index: -1;
+}
+
+#history dd {
+  margin-left: 10px;
+}
+
+#history dt::before {
+  content: ' ';
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  background-color: blueviolet;
+  border-radius: 50%;
+  position: absolute;
+  left: -3px;
+}
+
+#mission blockquote {
+  background-image: radial-gradient(rgb(198 198 255) 20%, white);
+  padding: 10px;
+  font-size: x-large;
+  border: 8px double var(--color-success);
+}
+
+@media screen and (width <= 768px) {
+  #testimonials ul {
+    flex-direction: column;
+
+    /* justify-content: center; */
+    align-items: center;
+  }
+}
