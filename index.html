@@ -19,6 +19,16 @@
   </head>
   <body>
     <header>
+      <button id="hamburger-menu" onclick="openNavDrawer()">&#9776;</button>
+      <nav class="nav-drawer" aria-expanded="false">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
       <nav>
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -107,5 +117,6 @@
     </footer>
 
     <script src="js/dark-mode.js"></script>
+    <script src="js/nav-drawer.js"></script>
   </body>
 </html>
