@@ -222,3 +222,21 @@ select:user-invalid ~ .err-msg {
   font-size: 14px;
   font-weight: 700;
 }
+
+#live-search-label {
+  color: var(--color-accent);
+}
+
+#live-search {
+  font-size: 15px;
+  padding: 1px;
+}
+
+span.highlight {
+  color: black;
+  background-color: yellow;
+}
+
+#no-result {
+  display: none;
+}
