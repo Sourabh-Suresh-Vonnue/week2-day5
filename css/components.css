@@ -7,7 +7,7 @@
   margin-bottom: 10px;
 }
 
-.grid-wrapper li {
+.grid-wrapper > li {
   display: flex;
   flex-direction: column;
 
@@ -50,18 +50,18 @@ thead {
   position: sticky;
 }
 
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
 tbody tr:nth-child(odd) {
   background-color: rgb(194 194 194);
 }
 
 tbody th {
   background-color: var(--clr-pri-ts2);
-}
-
-th,
-td {
-  padding: 10px;
-  text-align: center;
 }
 
 /* recommended column */
