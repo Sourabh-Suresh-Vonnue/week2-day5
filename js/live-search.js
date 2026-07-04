@@ -102,3 +102,15 @@ window.addEventListener('popstate', (event) => {
   searchInp.value = input;
   liveSearch(input, false);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const url = new URL(window.location);
+  let input;
+  if (url.searchParams.has('input')) {
+    input = url.searchParams.get('input');
+  } else {
+    input = '';
+  }
+  searchInp.value = input;
+  liveSearch(input, false);
+});
