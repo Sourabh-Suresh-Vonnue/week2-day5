@@ -36,8 +36,7 @@ function textHighlight(parent, inp, regex) {
   });
 }
 
-function liveSearch(event) {
-  const inp = event.target.value.trim().toLowerCase();
+function liveSearch(inp = '', pushHistory = false) {
   noResult.style.display = 'none';
 
   if (inp == '') {
@@ -71,11 +70,35 @@ function liveSearch(event) {
   matchCards.forEach((card) => {
     textHighlight(card, inp, regex);
   });
+
+  if (pushHistory) {
+    const url = new URL(window.location);
+    url.searchParams.set('input', inp);
+    history.pushState({ input: inp }, null, url);
+  }
 }
 
 searchInp.addEventListener('input', (event) => {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
-    liveSearch(event);
+    const inp = event.target.value.trim().toLowerCase();
+    liveSearch(inp, true);
   }, debounceDelay);
+});
+
+window.addEventListener('popstate', (event) => {
+  // const state = event.state;
+  // console.log(state);
+  // const query = state?.input ?? '';
+  // console.log(query);
+
+  const url = new URL(window.location);
+  let input;
+  if (url.searchParams.has('input')) {
+    input = url.searchParams.get('input');
+  } else {
+    input = '';
+  }
+  searchInp.value = input;
+  liveSearch(input, false);
 });
