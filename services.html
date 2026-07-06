@@ -16,9 +16,20 @@
     <meta property="og:site_name" content="Electrifex" />
 
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/components/darkMode.js" type="module"></script>
   </head>
   <body>
     <header>
+      <button id="hamburger-menu" onclick="openNavDrawer()">&#9776;</button>
+      <nav class="nav-drawer" aria-expanded="false">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -28,10 +39,14 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button id="dark-mode-btn" type="button">Dark Mode</button>
     </header>
     <main>
       <section id="services">
         <h1>Our Services</h1>
+        <label for="live-search" id="live-search-label">Search Services: </label>
+        <input type="search" name="search-services" id="live-search" />
+        <p id="no-result">No results</p>
         <ul class="grid-wrapper">
           <li>
             <article>
@@ -168,5 +183,7 @@
     <footer>
       <small>&copy; All right are preserved. Electrifex</small>
     </footer>
+    <script src="js/nav-drawer.js"></script>
+    <script src="js/live-search.js"></script>
   </body>
 </html>
