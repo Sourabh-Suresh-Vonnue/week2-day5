@@ -8,7 +8,7 @@ if (savedTheme == 'dark') {
   document.getElementById('dark-mode-btn').setAttribute('aria-pressed', false);
 }
 
-function darkMode() {
+export function darkMode(event) {
   let newTheme = 'dark';
   let newText = 'Light Mode';
   const currTheme = document.body.getAttribute('data-theme');
@@ -25,3 +25,6 @@ function darkMode() {
   toggleBtn.innerText = newText;
   toggleBtn.setAttribute('aria-pressed', ariaPressed);
 }
+
+let toggleBtn = document.getElementById('dark-mode-btn');
+toggleBtn.addEventListener('click', darkMode);
