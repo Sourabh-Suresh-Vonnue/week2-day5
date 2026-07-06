@@ -17,28 +17,15 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/components/darkMode.js" type="module"></script>
+    <script src="js/components/nav.js" type="module"></script>
+    <script src="js/nav-drawer.js" type="module"></script>
+    <script src="js/components/back-to-top.js" type="module"></script>
+    <script src="js/components/scroll-animation.js" type="module"></script>
   </head>
   <body>
     <header>
-      <button id="hamburger-menu" onclick="openNavDrawer()">&#9776;</button>
-      <nav class="nav-drawer" aria-expanded="false">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <nav>
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <button id="hamburger-menu" aria-expanded="false">&#9776;</button>
+      <nav id="main-nav" class="nav-drawer"></nav>
       <button id="dark-mode-btn" type="button">Dark Mode</button>
     </header>
     <main>
@@ -47,7 +34,7 @@
       </section>
       <section id="features">
         <h2>Features</h2>
-        <ul class="grid-wrapper">
+        <ul class="grid-wrapper scroll-animation-container">
           <li>
             <h3>Low-Latency, High-Quality sound</h3>
             <p>
@@ -73,7 +60,7 @@
       </section>
       <section id="testimonials">
         <h2>Testimonials</h2>
-        <ul class="flex-wrapper">
+        <ul class="flex-wrapper scroll-animation-container">
           <li>
             <blockquote cite="https://www.alpsalpine.com/e/">
               <p>
@@ -116,7 +103,6 @@
     <footer>
       <small>&copy; All right are preserved. Electrifex</small>
     </footer>
-
-    <script src="js/nav-drawer.js"></script>
+    <button id="back-to-top" type="button">Back to Top</button>
   </body>
 </html>

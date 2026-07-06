@@ -240,3 +240,53 @@ span.highlight {
 #no-result {
   display: none;
 }
+
+.accordion {
+  max-width: 900px;
+  background-color: antiquewhite;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+}
+
+.accordion-button .accordion-title {
+  flex: 1;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+#back-to-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  padding: 5px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  display: none;
+}
+
+.visible {
+  animation: fade-in 3s ease;
+
+  /* opacity: 1;
+  transform: translateY(0); */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

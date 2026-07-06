@@ -1,18 +1,22 @@
 const navDrawer = document.querySelector('.nav-drawer');
+const hamburgerMenuBtn = document.getElementById('hamburger-menu');
 
 function openNavDrawer() {
   navDrawer.classList.toggle('open');
-
   document.body.classList.toggle('body-scroll');
-
-  let isAriaExpanded = navDrawer.getAttribute('aria-expanded') == 'true';
-  navDrawer.setAttribute('aria-expanded', !isAriaExpanded);
+  let isAriaExpanded = hamburgerMenuBtn.getAttribute('aria-expanded') == 'true';
+  hamburgerMenuBtn.setAttribute('aria-expanded', !isAriaExpanded);
+  navDrawer.addEventListener('keydown', navDrawerFocusTrap);
 }
+
+hamburgerMenuBtn.addEventListener('click', openNavDrawer);
 
 function closeNavDrawer() {
   navDrawer.classList.remove('open');
   document.body.classList.remove('body-scroll');
-  navDrawer.setAttribute('aria-expanded', false);
+  hamburgerMenuBtn.setAttribute('aria-expanded', false);
+  hamburgerMenuBtn.setAttribute('aria-expanded', false);
+  navDrawer.removeEventListener('keydown', navDrawerFocusTrap);
 }
 
 document.addEventListener('keydown', function (event) {
@@ -32,14 +36,14 @@ const focusableElements = navDrawer.getElementsByTagName('a');
 let firstFocusEle = focusableElements[0];
 let lastFocusEle = focusableElements[focusableElements.length - 1];
 
-navDrawer.addEventListener('keydown', function (e) {
+function navDrawerFocusTrap(e) {
   const isTab = e.key === 'Tab';
   if (!isTab) return;
 
   if (e.shiftKey) {
     if (document.activeElement === firstFocusEle) {
       lastFocusEle.focus();
-      e.preventDefault;
+      e.preventDefault();
     }
   } else {
     if (document.activeElement === lastFocusEle) {
@@ -47,4 +51,4 @@ navDrawer.addEventListener('keydown', function (e) {
       e.preventDefault();
     }
   }
-});
+}

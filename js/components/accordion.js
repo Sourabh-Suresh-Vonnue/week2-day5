@@ -27,4 +27,33 @@ function expandAccordion(event) {
   });
 }
 
+const accordionBtns = Array.from(accordionContainer.getElementsByClassName('accordion-button'));
+accordionBtns.forEach((accordion, index) => {
+  accordion.addEventListener('keydown', (event) => {
+    let nextIndex;
+    switch (event.key) {
+      case 'ArrowUp':
+        event.preventDefault();
+        nextIndex = (index - 1 + accordionBtns.length) % accordionBtns.length;
+        accordionBtns[nextIndex].focus();
+        break;
+      case 'ArrowDown':
+        event.preventDefault();
+        nextIndex = (index + 1) % accordionBtns.length;
+        accordionBtns[nextIndex].focus();
+        break;
+      case 'Home':
+        event.preventDefault();
+        nextIndex = 0;
+        accordionBtns[nextIndex].focus();
+        break;
+      case 'End':
+        event.preventDefault();
+        nextIndex = accordionBtns.length - 1;
+        accordionBtns[nextIndex].focus();
+        break;
+    }
+  });
+});
+
 accordionContainer.addEventListener('click', expandAccordion);
