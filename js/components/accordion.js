@@ -1,3 +1,5 @@
+const accordionContainer = document.querySelector('.accordion-container');
+
 function expandAccordion(event) {
   const accordionBtn = event.target.closest('.accordion-button');
   if (accordionBtn == null) return;
