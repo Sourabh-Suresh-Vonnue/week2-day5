@@ -16,22 +16,26 @@
     <meta property="og:site_name" content="Electrifex" />
 
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/components/darkMode.js" type="module"></script>
+    <script src="js/components/nav.js" type="module"></script>
+    <script src="js/nav-drawer.js" type="module"></script>
+    <script src="js/components/accordion.js" type="module"></script>
+    <script src="js/components/back-to-top.js" type="module"></script>
+    <!-- <script src="js/live-search.js" type="module"></script> -->
+    <script src="js/services.js" type="module"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" aria-current="page">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <button id="hamburger-menu" aria-expanded="false">&#9776;</button>
+      <nav id="main-nav" class="nav-drawer"></nav>
+      <button id="dark-mode-btn" type="button">Dark Mode</button>
     </header>
     <main>
       <section id="services">
         <h1>Our Services</h1>
+        <label for="live-search" id="live-search-label">Search Services: </label>
+        <input type="search" name="search-services" id="live-search" />
+        <p id="no-result">No results</p>
         <ul class="grid-wrapper">
           <li>
             <article>
@@ -85,6 +89,7 @@
             </article>
           </li>
         </ul>
+        <button class="retry-btn" type="button">Retry</button>
         <br />
         <div class="table-wrapper">
           <table border="1">
@@ -163,10 +168,86 @@
             </tbody>
           </table>
         </div>
+        <section class="faqs">
+          <div class="accordion-container">
+            <div class="accordion">
+              <button
+                id="accordion-btn-1"
+                class="accordion-button"
+                aria-expanded="false"
+                type="button"
+                aria-controls="accordion-panel-1"
+              >
+                <span class="accordion-title">FAQ 1</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div
+                class="accordion-content"
+                id="accordion-panel-1"
+                aria-labelledby="accordion-btn-1"
+              >
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, repudiandae
+                  debitis! Perspiciatis dignissimos sapiente, blanditiis qui fugiat impedit nihil.
+                  Repudiandae optio, explicabo animi veniam praesentium quis facilis illo qui nemo?
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button
+                id="accordion-btn-2"
+                class="accordion-button"
+                aria-expanded="false"
+                type="button"
+                aria-controls="accordion-panel-2"
+              >
+                <span class="accordion-title">FAQ 2</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div
+                class="accordion-content"
+                id="accordion-panel-2"
+                aria-labelledby="accordion-btn-2"
+              >
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fuga earum
+                  repudiandae maiores cupiditate ab alias nihil eius consequatur, qui error nulla
+                  minima aspernatur repellendus quibusdam expedita dolorum necessitatibus? Nesciunt.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button
+                id="accordion-btn-3"
+                class="accordion-button"
+                aria-expanded="false"
+                type="button"
+                aria-controls="accordion-panel-3"
+              >
+                <span class="accordion-title">FAQ 3</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div
+                class="accordion-content"
+                id="accordion-panel-3"
+                aria-labelledby="accordion-btn-3"
+              >
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fuga earum
+                  repudiandae maiores cupiditate ab alias nihil eius consequatur, qui error nulla
+                  minima aspernatur repellendus quibusdam expedita dolorum necessitatibus? Nesciunt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <footer>
       <small>&copy; All right are preserved. Electrifex</small>
     </footer>
+    <button id="back-to-top" type="button">Back to Top</button>
   </body>
 </html>
