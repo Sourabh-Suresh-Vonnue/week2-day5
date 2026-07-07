@@ -21,7 +21,8 @@ export function showToast(type = 'info', message, delay = 3000) {
   if (!toastContainer) return;
   const toast = document.createElement('div');
   toast.classList.add('toast');
-  toast.classList.add(type);
+  toast.classList.add('toast-' + type);
   toast.textContent = message;
-  setTimeout(toast.remove(), delay);
+  toastContainer.appendChild(toast);
+  setTimeout(() => toast.remove(), delay);
 }
