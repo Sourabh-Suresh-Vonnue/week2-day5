@@ -25,7 +25,7 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-navDrawer.addEventListener('click', function (event) {
+navDrawer.addEventListener('click', function () {
   //   const isNavDrawerOpen = navDrawer.classList.contains('open');
   //   if (isNavDrawerOpen) {
   closeNavDrawer();

@@ -1,4 +1,4 @@
-function entryAnimation(entries, observer) {
+function entryAnimation(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const article = entry.target;
@@ -21,7 +21,7 @@ let blogArticles = document.querySelectorAll('#blogs article');
 blogArticles.forEach((article) => observer.observe(article));
 
 // reading progress
-function readingProgress(event) {
+function readingProgress() {
   requestAnimationFrame(readingProgressUpdate);
 }
 function readingProgressUpdate() {
@@ -46,7 +46,7 @@ backToTopBtn.onclick = () => {
   });
 };
 
-function backToTop(event) {
+function backToTop() {
   const scrollY = window.scrollY;
 
   if (scrollY > 300) {
@@ -102,7 +102,7 @@ let replyForms = Array.from(document.getElementsByClassName('reply-form'));
 replyForms.forEach((replyForm) => {
   replyForm.addEventListener('submit', commentFormSubmitFn);
 });
-let noOfRelpies = replyForms.length;
+// let noOfRelpies = replyForms.length;
 
 function createNewComment(name, content, id, upvotes = '', upvoted = false) {
   let newComment = document.createElement('li');
@@ -176,7 +176,7 @@ function increaseUpvoteCount(event) {
   let temp = artComm;
 
   temp = temp[Number(parentListId.at(3))];
-  for (index of parentListId.slice(4)) {
+  for (let index of parentListId.slice(4)) {
     temp = temp.replies[index];
   }
   temp.upvotes = upvoteBtn.textContent;

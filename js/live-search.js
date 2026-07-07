@@ -54,7 +54,7 @@ export function liveSearch(inp = '', pushHistory = false) {
     card.style.display = 'none';
   });
 
-  const escapedTerm = inp.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  const escapedTerm = inp.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
   const regex = new RegExp(`(${escapedTerm})`, 'gi');
 
   const matchCards = serviceCards.filter((card) => {
@@ -93,7 +93,7 @@ searchInp.addEventListener('input', (event) => {
   // }, debounceDelay);
 });
 
-window.addEventListener('popstate', (event) => {
+window.addEventListener('popstate', () => {
   // const state = event.state;
   // console.log(state);
   // const query = state?.input ?? '';

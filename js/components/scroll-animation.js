@@ -1,4 +1,4 @@
-function entryAnimation(entries, observer) {
+function entryAnimation(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const ele = entry.target;

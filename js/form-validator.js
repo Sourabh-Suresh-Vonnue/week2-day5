@@ -11,7 +11,7 @@ export class FormValidator {
       'blur',
       (event) => {
         if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
-          let isValid = this.validateInputField(event.target);
+          this.validateInputField(event.target);
         }
       },
       true
@@ -28,7 +28,7 @@ export class FormValidator {
     if (!inputFieldRules) return true;
 
     const inputValue = inputField.value.trim();
-    let errorMessage = '';
+    let errorMessage;
 
     for (const rule of inputFieldRules) {
       if (rule.type === 'required' && inputValue === '') {

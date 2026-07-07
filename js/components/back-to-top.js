@@ -7,7 +7,7 @@ backToTopBtn.onclick = () => {
   });
 };
 
-function backToTop(event) {
+function backToTop() {
   const scrollY = window.scrollY;
 
   if (scrollY > 300) {

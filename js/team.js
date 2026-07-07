@@ -64,7 +64,7 @@ async function updateTeamMembers() {
 
 updateTeamMembers();
 const retryBtn = document.querySelector('.retry-btn');
-retryBtn.addEventListener('click', (event) => {
-  updateServices();
+retryBtn.addEventListener('click', () => {
+  updateTeamMembers();
   retryBtn.style.display = 'none';
 });

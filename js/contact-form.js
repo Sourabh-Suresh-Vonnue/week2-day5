@@ -12,7 +12,7 @@ let contactRules = {
 };
 let validator = new FormValidator(form, contactRules);
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', () => {
   showToast('info', 'Form submitting...', 1500);
   setTimeout(() => {
     if (validator.isFormValid) {

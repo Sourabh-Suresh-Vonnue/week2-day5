@@ -29,7 +29,7 @@ async function updateLatestNews() {
 
 updateLatestNews();
 const retryBtn = document.querySelector('.retry-btn');
-retryBtn.addEventListener('click', (event) => {
-  updateServices();
+retryBtn.addEventListener('click', () => {
+  updateLatestNews();
   retryBtn.style.display = 'none';
 });

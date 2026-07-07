@@ -8,7 +8,7 @@ if (savedTheme == 'dark') {
   document.getElementById('dark-mode-btn').setAttribute('aria-pressed', false);
 }
 
-export function darkMode(event) {
+export function darkMode() {
   let newTheme = 'dark';
   let newText = 'Light Mode';
   const currTheme = document.body.getAttribute('data-theme');

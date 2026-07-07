@@ -106,7 +106,7 @@ fullscreenOverlay.addEventListener('keydown', (event) => {
   }
 });
 
-closeBtn.addEventListener('click', (event) => {
+closeBtn.addEventListener('click', () => {
   fullscreenOverlay.style.display = 'none';
   document.body.classList.remove('body-scroll');
   fullscreenOverlay.removeEventListener('click', imageNavFn);

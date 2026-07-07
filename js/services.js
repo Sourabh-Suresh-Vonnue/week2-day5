@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 const retryBtn = document.querySelector('.retry-btn');
-retryBtn.addEventListener('click', (event) => {
+retryBtn.addEventListener('click', () => {
   updateServices();
   retryBtn.style.display = 'none';
 });
