@@ -20,24 +20,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="js/components/darkMode.js" type="module"></script>
+    <script src="js/components/nav.js" type="module"></script>
+    <script src="js/nav-drawer.js" type="module"></script>
+    <script src="js/components/back-to-top.js" type="module"></script>
+    <script src="js/team.js" type="module"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html" aria-current="page">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <button id="hamburger-menu" aria-expanded="false">&#9776;</button>
+      <nav id="main-nav" class="nav-drawer"></nav>
+      <button id="dark-mode-btn" type="button">Dark Mode</button>
     </header>
 
     <main>
       <h1>Meet the Team</h1>
 
-      <span>Filter: </span>
+      <span id="text-filter">Filter: </span>
       <div class="filter">
         <a href="#developer">Developer</a>
         <a href="#management">Management</a>
@@ -210,9 +209,11 @@
           </figure>
         </div>
       </section>
+      <button class="retry-btn" type="button">Retry</button>
     </main>
     <footer>
       <small>&copy; All right are preserved. Electrifex</small>
     </footer>
+    <button id="back-to-top" type="button">Back to Top</button>
   </body>
 </html>
