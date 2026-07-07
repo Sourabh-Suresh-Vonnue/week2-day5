@@ -15,7 +15,9 @@ if (window.location.pathname == '/') {
   const url = window.location.pathname;
   const links = Array.from(navUl.getElementsByTagName('a'));
   const link = links.find((link) => link.pathname == url);
-  link.setAttribute('aria-current', 'page');
+  if (link) {
+    link.setAttribute('aria-current', 'page');
+  }
 }
 
 nav.appendChild(navUl);
