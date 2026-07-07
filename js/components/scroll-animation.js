@@ -18,7 +18,6 @@ function entryAnimation(entries, observer) {
 
 const observer = new IntersectionObserver(entryAnimation);
 let scrollAnimationElements = document.querySelectorAll('.scroll-animation-container > li');
-console.log(scrollAnimationElements);
 
 scrollAnimationElements.forEach((scrollAnimationElement) =>
   observer.observe(scrollAnimationElement)

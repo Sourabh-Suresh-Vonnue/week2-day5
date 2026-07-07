@@ -1,11 +1,13 @@
-const searchInp = document.getElementById('live-search');
+import { debounce } from './utils.js';
+
+export const searchInp = document.getElementById('live-search');
 
 const serviceCards = Array.from(document.querySelectorAll('#services .grid-wrapper > li'));
 const originalCardContent = serviceCards.map((card) => card.innerHTML);
 
 const noResult = document.getElementById('no-result');
 
-let debounceTimer;
+// let debounceTimer;
 const debounceDelay = 300;
 
 function textHighlight(parent, inp, regex) {
@@ -36,7 +38,7 @@ function textHighlight(parent, inp, regex) {
   });
 }
 
-function liveSearch(inp = '', pushHistory = false) {
+export function liveSearch(inp = '', pushHistory = false) {
   noResult.style.display = 'none';
 
   if (inp == '') {
@@ -78,12 +80,17 @@ function liveSearch(inp = '', pushHistory = false) {
   }
 }
 
+let debounceLiveSearch = debounce(liveSearch, debounceDelay);
+
 searchInp.addEventListener('input', (event) => {
-  clearTimeout(debounceTimer);
-  debounceTimer = setTimeout(() => {
-    const inp = event.target.value.trim().toLowerCase();
-    liveSearch(inp, true);
-  }, debounceDelay);
+  const inp = event.target.value.trim().toLowerCase();
+  debounceLiveSearch(inp, true);
+
+  // clearTimeout(debounceTimer);
+  // debounceTimer = setTimeout(() => {
+  //   const inp = event.target.value.trim().toLowerCase();
+  //   liveSearch(inp, true);
+  // }, debounceDelay);
 });
 
 window.addEventListener('popstate', (event) => {
