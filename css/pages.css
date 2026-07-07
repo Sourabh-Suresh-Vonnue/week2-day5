@@ -25,6 +25,7 @@ h1 {
 
 #history {
   position: relative;
+  color: var(--color-text);
 }
 
 #history dl {
@@ -39,7 +40,7 @@ h1 {
   content: ' ';
   width: 3px;
   height: 78%;
-  border: 2px solid black;
+  border: 2px solid var(--color-accent);
   position: absolute;
   left: -1px;
   z-index: -1;
@@ -88,6 +89,7 @@ h1 {
   list-style-type: circle;
   margin-left: 25px;
   text-align: left;
+  color: var(--clr-pri-ts1);
 }
 
 #services .grid-wrapper > li:hover {
@@ -172,6 +174,10 @@ h1 {
 
 .cards figure:hover ul {
   opacity: 1;
+}
+
+#text-filter {
+  color: var(--color-accent);
 }
 
 .filter {
