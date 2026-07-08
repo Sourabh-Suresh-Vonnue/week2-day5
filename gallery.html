@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D2T8</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+
+    <script type="module" src="js/main.js"></script>
+    <script src="js/nav-drawer.js" type="module"></script>
+    <script src="js/components/back-to-top.js" type="module"></script>
+    <script src="js/gallery.js" type="module"></script>
+  </head>
+  <body>
+    <div class="fullscreen-overlay">
+      <button class="nav-btn" id="nav-btn-left" type="button">&ltrif;</button>
+      <div class="fullscreen-content">
+        <img class="fullscreen-image" src="" alt="" />
+      </div>
+      <button class="nav-btn" id="nav-btn-right" type="button">&rtrif;</button>
+      <button class="close-btn" type="button">&Cross;</button>
+    </div>
+    <header>
+      <button id="hamburger-menu" aria-expanded="false">&#9776;</button>
+      <nav id="main-nav" class="nav-drawer"></nav>
+      <button id="dark-mode-btn" type="button">Dark Mode</button>
+    </header>
+    <main>
+      <h1>Gallery</h1>
+      <section>
+        <h2>View</h2>
+        <div class="grid-container">
+          <figure>
+            <img src="https://picsum.photos/800/600?random=1" alt="aerial view of" />
+            <figcaption>Fig 1.1 - aerial view of land with trees and river</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=2" alt="moutain view" />
+            <figcaption>Fig 1.2 - view of moutain near field</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=3" alt="river" />
+            <figcaption>Fig 1.3 - view river near moutain</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=4" alt="hill road" />
+            <figcaption>Fig 1.4 - hill road view</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=5" alt="view from plane" />
+            <figcaption>Fig 1.5 - view of land from plane</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Nature</h2>
+        <div class="grid-container">
+          <figure>
+            <img src="https://picsum.photos/800/600?random=6" alt="rocks" />
+            <figcaption>Fig 2.1 - light falling on rocks</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=7" alt="pebbels" />
+            <figcaption>Fig 2.2 - crystal view of pebbels in water</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=8" alt="seashore" />
+            <figcaption>Fig 2.3 - seashore rocks</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=9" alt="waterfall" />
+            <figcaption>Fig 2.4 - man enjoying the waterfall</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=10" alt="dessert" />
+            <figcaption>Fig 2.5 - empty dessert</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=11" alt="forest river" />
+            <figcaption>Fig 2.6 - image of forest river</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Man made</h2>
+        <div class="grid-container">
+          <figure>
+            <img src="https://picsum.photos/800/600?random=12" alt="camera" />
+            <figcaption>Fig 3.1 - cameras and lenses</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=13" alt="boat" />
+            <figcaption>Fig 3.2 - boat in the river</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=14" alt="car" />
+            <figcaption>Fig 3.3 - car</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/800/600?random=15" alt="laptop" />
+            <figcaption>Fig 3.4 - laptop on a table</figcaption>
+          </figure>
+        </div>
+      </section>
+      <p>
+        Section name and figcaption may differ from actual image, since the images are randomly
+        generated.
+      </p>
+
+      <!-- Below images are for decorative only. therefor no need of alt. then screen reader will ignore the image. -->
+      <figure>
+        <img src="https://picsum.photos/400/300?random=100" alt="" />
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/400/300?random=101" alt="" />
+      </figure>
+    </main>
+    <button id="back-to-top" type="button">Back to Top</button>
+  </body>
+</html>

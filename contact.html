@@ -16,20 +16,25 @@
     <meta property="og:site_name" content="Electrifex" />
 
     <link rel="stylesheet" href="css/main.css" />
+
+    <script type="module" src="js/main.js"></script>
+    <script src="js/nav-drawer.js" type="module"></script>
+    <script src="js/components/back-to-top.js" type="module"></script>
+    <script src="js/contact-form.js" type="module"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
+      <button id="hamburger-menu" aria-expanded="false">&#9776;</button>
+      <nav id="main-nav" class="nav-drawer"></nav>
+      <button id="dark-mode-btn" type="button">Dark Mode</button>
     </header>
     <main>
+      <div id="toast-container">
+        <!-- <div class="toast toast-info">Form submitting</div>
+        <div class="toast toast-success">Form submiited</div>
+        <div class="toast toast-error">Form error</div>
+        <div class="toast toast-warning">Form warning</div> -->
+      </div>
       <h1>Contact Us</h1>
       <div class="form-container">
         <form>
@@ -38,45 +43,45 @@
             <div class="form-label-input">
               <label for="fname">First Name *: </label>
               <div class="input-error">
-                <input type="text" name="fname" id="fname" required />
-                <span class="err-msg">Please fill out this field</span>
+                <input class="inputField" type="text" name="fname" id="fname" required />
+                <span class="err-msg"></span>
               </div>
             </div>
             <div class="form-label-input">
               <label for="lname">Last Name *: </label>
               <div class="input-error">
-                <input type="text" name="lname" id="lname" required />
-                <span class="err-msg">Please fill out this field</span>
+                <input class="inputField" type="text" name="lname" id="lname" required />
+                <span class="err-msg"></span>
               </div>
             </div>
           </div>
           <div class="form-label-input">
             <label for="email">Email *: </label>
             <div class="input-error">
-              <input type="email" name="email" id="email" required />
-              <span class="err-msg">Please fill out this field</span>
+              <input class="inputField" type="email" name="email" id="email" required />
+              <span class="err-msg"></span>
             </div>
           </div>
           <div class="form-label-input">
             <label for="phno">Phone Number: </label>
             <div class="input-error">
-              <input type="tel" name="phno" id="phno" />
-              <span class="err-msg">Please fill out this field</span>
+              <input class="inputField" type="tel" name="phno" id="phno" />
+              <span class="err-msg"></span>
             </div>
           </div>
           <div class="form-label-input">
             <label for="department">Department: </label>
-            <select name="department" id="department">
+            <select class="inputField" name="department" id="department">
               <option value="">Select a Department</option>
               <option value="development">Development</option>
               <option value="management">Management</option>
             </select>
           </div>
           <div class="form-label-input">
-            <label for="message">Message: </label>
+            <label for="message">Message *: </label>
             <div class="input-error">
-              <textarea name="message" id="message"></textarea>
-              <span class="err-msg">Please fill out this field</span>
+              <textarea class="inputField" name="message" id="message" required></textarea>
+              <span class="err-msg"></span>
             </div>
           </div>
           <div class="form-label-input">
@@ -105,5 +110,6 @@
     <footer>
       <small>&copy; All right are preserved. Electrifex</small>
     </footer>
+    <button id="back-to-top" type="button">Back to Top</button>
   </body>
 </html>
